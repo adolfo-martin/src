@@ -4,7 +4,7 @@ import { Product } from '../entities/product';
 import { ProductsRepositoryInterface } from './products-repository-interface';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ProductsArrayRepositoryMock implements ProductsRepositoryInterface {
     static products: Product[] = [
@@ -18,9 +18,9 @@ export class ProductsArrayRepositoryMock implements ProductsRepositoryInterface 
             delay(1500)
         )
     }
+
     retrieveProductByUuid$(uuid: string): Observable<Product | undefined> {
-        return of(ProductsArrayRepositoryMock.products
-            .find(product => product.uuid === uuid)
+        return of(ProductsArrayRepositoryMock.products.find(product => product.uuid === uuid)
         ).pipe(
             delay(1500)
         )

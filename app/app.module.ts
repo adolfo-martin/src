@@ -4,13 +4,13 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { cartReducer } from './state/cart.reducers';
-import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { CartHeaderComponent } from './components/cart-header/cart-header.component';
+import { ProductsSelectComponent } from './components/products-select/products-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsTableComponent,
+    ProductsSelectComponent,
     CartHeaderComponent,
   ],
   imports: [

@@ -3,8 +3,8 @@
 <br>
 <br>
 
-<products-table #tabProducts (productsLoaded)="manageProductsLoaded($event)"
+<products-select #tabProducts (productsLoaded)="manageProductsLoaded($event)"
     (productChanged)="manageProductChanged($event)">
-</products-table>
+</products-select>
 
 <input type="button" value="Añadir producto" (click)="manageAddProductToCard($event)">

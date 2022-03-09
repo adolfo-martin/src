@@ -7,9 +7,7 @@ export const initialCartEntries: Product[] = []
 const _clearCart = (_: any) => []
 
 const _addProduct = (entries: Product[], product: Product) => {
-    // console.log(entries)
     const entriesClone: Product[] = JSON.parse(JSON.stringify(entries))
-    // console.log(entriesClone)
     console.log(product)
     entriesClone.push(product)
     return entriesClone
