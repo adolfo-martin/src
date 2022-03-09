@@ -1,0 +1,4 @@
+<select *ngIf="products$ | async as products" (change)="manageProductChanged($event)">
+    <option selected disabled>Seleccione un producto</option>
+    <option *ngFor="let product of products" [value]="product">{{product.name}}</option>
+</select>

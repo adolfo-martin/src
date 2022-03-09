@@ -1,0 +1,10 @@
+<cart-header></cart-header>
+
+<br>
+<br>
+
+<products-table #tabProducts (productsLoaded)="manageProductsLoaded($event)"
+    (productChanged)="manageProductChanged($event)">
+</products-table>
+
+<input type="button" value="Añadir producto" (click)="manageAddProductToCard($event)">
