@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ProductsService } from '../../services/products.service';
+import { AddProductAction } from '../store/actions/cart.actions';
 import { ProductUuid } from './../entities/product';
-import { addProduct } from './../state/cart.actions';
+// import { addProduct } from './../state/cart.actions';
 
 @Component({
   selector: 'products-page',
@@ -28,7 +29,8 @@ export class ProductsPageComponent {
       this._productsService.retrieveProductByUuid$(this._currentProductUuid)
         .subscribe(product => {
           if (product) {
-            this._store.dispatch(addProduct(product))
+            // this._store.dispatch(addProduct(product))
+            this._store.dispatch(new AddProductAction(product))
           }
         }
         )

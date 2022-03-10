@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { StoreModule } from '@ngrx/store';
+import { ReducerManager, StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { cartReducer } from './state/cart.reducers';
 import { CartHeaderComponent } from './components/cart-header/cart-header.component';
 import { ProductsSelectComponent } from './components/products-select/products-select.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { CartReducer } from './store/reducers/cart.reducers';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ProductsPageComponent } from './products-page/products-page.component';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ cartEntries: cartReducer })
+    //@ts-ignore
+    StoreModule.forRoot({ cart: CartReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
