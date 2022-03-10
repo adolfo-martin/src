@@ -1,0 +1,6 @@
+
+<products-select #tabProducts (productsLoaded)="manageProductsLoaded($event)"
+(productChanged)="manageProductChanged($event)">
+</products-select>
+
+<input type="button" value="Añadir producto" (click)="manageAddProductToCard($event)">

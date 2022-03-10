@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 2px blue;
+    background-color: lightblue;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.products-summary {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem
+}
+
+.products-summary > .label {
+    text-align: right;
+}
