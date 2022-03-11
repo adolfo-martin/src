@@ -18,7 +18,7 @@ import { CartReducer } from './store/reducers/cart.reducers';
   imports: [
     BrowserModule,
     //@ts-ignore
-    StoreModule.forRoot({ cart: CartReducer })
+    StoreModule.forRoot({ cartItems: CartReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

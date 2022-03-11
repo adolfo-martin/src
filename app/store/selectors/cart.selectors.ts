@@ -1,15 +1,15 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { Product } from "../entities/product";
+import { ProductItemI } from "../models/product-item-i";
 
 export const productsTotalQuantitySelector = createSelector(
     createFeatureSelector('cartItems'),
-    (cart: Product[]) => cart.length
+    (cart: ProductItemI[]) => cart.length
 )
 
 export const productsTotalPriceSelector = createSelector(
     createFeatureSelector('cartItems'),
-    (cart: Product[]) => cart.reduce(
-        (acc: number, cur: Product) => { console.log(cart); console.log(cur); acc += cur.price; return acc },
+    (cart: ProductItemI[]) => cart.reduce(
+        (acc: number, cur: ProductItemI) => { console.log(cart); console.log(cur); acc += cur.price; return acc },
         0
     )
 )
